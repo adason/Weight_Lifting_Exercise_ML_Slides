@@ -33,7 +33,7 @@
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
     <h1>Introduction to Machine Learning Prediction App</h1>
-    <h2>Weight Lifting Exercise Dataset</h2>
+    <h2>on Weight Lifting Exercise Dataset</h2>
     <p>You-Cyuan Jhang<br/></p>
   </hgroup>
   <article></article>  
@@ -43,14 +43,14 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>Introduction</h2>
   </hgroup>
   <article data-timings="">
-    <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
-</ol>
+    <ul>
+<li><p>This app is build from the Weight Lifting Exercise Dataset collected by <a href="mailto:Groupware@LES">Groupware@LES</a>. For more information about the dataset, see their <a href="http://groupware.les.inf.puc-rio.br/har">website</a>.</p></li>
+<li><p>The main description about my data preprocessing step is presented in my Practical Machine Learning Course Project <a href="http://adason.github.io/Weight_Lifting_Exercise_ML/tree_based_prediction.html">writeup</a>.</p></li>
+<li><p>In this app, I would like to present the visualization of preprocessed data. Meanwhile, I will demostrate the parameter tuning of machine learning predictions using generalized linear model with <code>L1</code> (lasso) and <code>L2</code> (ridge) regularizations.</p></li>
+</ul>
 
   </article>
   <!-- Presenter Notes -->
@@ -58,10 +58,52 @@
 
 <slide class="class" id="id" style="background:;">
   <hgroup>
-    <h2>Slide 2</h2>
+    <h2>Top Left Panel</h2>
   </hgroup>
   <article data-timings="">
-    
+    <ul>
+<li><p>On the top left panel, you can choose changing the number of principle components that you want to use as features in machine leraning model. Including more principle components might slow down the app since you have to perform machine learning on bigger feature space.</p></li>
+<li><p>You can also choose the x-axis and the y-axis for plotting the dataset on the top right panel.</p></li>
+</ul>
+
+<h2>Top Right Panel</h2>
+
+<ul>
+<li><p>This panel is the scatter plot of <code>testing</code> dataset that was set aside for maching learning predictions. The x-axis and y-axis can be arbirary chosen. </p></li>
+<li><p>Data points are color coded as their actual classes in testing dataset. On the other hand, the prediction color are used to enclose the actual calsses. If you didn&#39;t notice differernt color for each data point, that means our machine learning makes the prediction correctly.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Bottom Left Panel</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>In this panel, you can control the type of regularizaions that you want to incluse in the taining model. You can choose to perform just L1 regularization (lasso) or L2 regularization (ridge), or you can include both.</p></li>
+<li><p>You can choose the range of regularization parameters on the left panel as well. Different range might give you different best model. Try to choose differernt ranges to get the best accuracy!</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Bottom Right Panel</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>This panel are separated into three tabs. </p></li>
+<li><p>The first <code>Plot</code> tab includes the 5 repeated 5-fold cross validation training accuracy estimate of different tuning parameters (from your choice of the bottom left panel.)</p></li>
+<li><p>You can see the performace of the best model chosen from your cross-validated training models.</p></li>
+<li><p>The confusionmatrix will present the accuracy statistics and the predicted vs reference table of the testing dataset.</p></li>
+<li><p>You can also look as some details of your best model.</p></li>
+</ul>
+
   </article>
   <!-- Presenter Notes -->
 </slide>
@@ -72,14 +114,26 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='Introduction'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Top Left Panel'>
          2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Bottom Left Panel'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Bottom Right Panel'>
+         4
       </a>
     </li>
   </ul>
